@@ -1,0 +1,7 @@
+<!--@subject {{var subject}}!@-->
+Dear Keymail user,
+Use the following Keymail link  to log in:
+{{var link}}
+                          
+If you have any questions about your keymail link or any other matter, please feel free to contact us at {{config path='trans_email/ident_support/email'}} or by phone at {{config path='general/store_information/phone'}}.
+Thank you again, {{var store.getFrontendName()}}.

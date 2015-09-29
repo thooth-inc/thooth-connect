@@ -1,0 +1,92 @@
+<?xml version="1.0"?>
+<config>
+	<modules>
+		<Keymail_KeymailLogin>
+			<version>>1.0.3</version>
+		</Keymail_KeymailLogin>
+	</modules>
+	<frontend>
+		<routers>
+			<customer>
+				<args>
+					<modules>
+						<Keymail_KeymailLogin before="Mage_Customer">Keymail_KeymailLogin</Keymail_KeymailLogin>
+					</modules>
+				</args>
+			</customer>
+			
+			<keymail>
+                <use>standard</use>
+                <args>
+                    <module>Keymail_KeymailLogin</module>
+                    <frontName>keymail</frontName>
+                </args>
+            </keymail>
+		</routers>
+		<layout>
+			<updates>
+				<keymaillogin>
+					<file>keymail.xml</file>
+				</keymaillogin>
+			</updates>
+		</layout>
+
+	</frontend>
+	<global>
+		<blocks>
+			<customer>
+				<rewrite>
+					<form_login>Keymail_KeymailLogin_Block_Form_Login</form_login>
+				</rewrite>
+			</customer>
+		</blocks>
+		
+		<helpers>
+            <keymail>
+                <class>Keymail_KeymailLogin_Helper</class>
+            </keymail>
+        </helpers>
+		
+		<routers>
+			<customer>
+				<rewrite>
+					<keymail_keymaillogin_account>
+						<from><![CDATA[#^/account/#]]></from>
+						<to>/customer/account/</to>
+					</keymail_keymaillogin_account>
+				</rewrite>
+			</customer>
+		</routers>
+		<helpers>
+			<customer>
+				<rewrite>
+					<data>Keymail_KeymailLogin_Helper_Data</data>
+				</rewrite>
+			</customer>
+		</helpers>
+        
+	<template>
+      <email>
+        <keymail_email_template_html translate="label" module="customer">
+          <label>Keymail template (HTML Version)</label>
+          <file>keymail_new.html</file>
+          <type>html</type>
+          </keymail_email_template_html>
+          
+          <keymail_email_template_text translate="label" module="customer">
+          <label>Keymail template (Plaintext)</label>
+          <file>keymail_new.txt</file>
+          <type>text</type>
+          </keymail_email_template_text>
+          
+        </email>
+     </template> 
+     </global>
+     <default>
+        <customer>
+            <keymail>
+                <defaultname>Keymail User</defaultname>
+            </keymail>
+        </customer>
+    </default>
+</config>

@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<config>
+     <acl>
+        <resources>
+            <all>
+                <title>Allow Everything</title>
+            </all>
+            <admin>
+                <children>
+                    <keymail>
+                        <title>keymail Module</title>
+                        <sort_order>200</sort_order>
+                    </keymail>
+                </children>
+            </admin>
+        </resources>   
+    </acl>
+    <layout>
+        <updates>
+            <keymail>
+                <file>keymail.xml</file>
+            </keymail>
+        </updates>
+    </layout>
+</config>

@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<package>
+    <name>Keymail_KeymailLogin</name>
+    <version>1.0.3</version>
+    <stability>stable</stability>
+    <license>http://opensource.org/licenses/afl-3.0.php</license>
+    <channel>community</channel>
+    <extends/>
+    <summary>Keymail provides a secure, straightforward method for customers to log into your site without passwords only with email</summary>
+    <description>Keymail provides a secure, straightforward method for customers to log into your site without passwords only with email</description>
+    <notes>- Simplified keymail link&#xD;
+- Skip profile update if already updated manually. &#xD;
+</notes>
+    <authors><author><name>Jason Cain</name><user>keymail</user><email>jason@wifilez.com</email></author></authors>
+    <date>2012-08-20</date>
+    <time>17:21:09</time>
+    <contents><target name="magecommunity"><dir name="Keymail"><dir name="KeymailLogin"><dir name="Block"><dir name="Form"><file name="Login.php" hash="61f704c6d8a48095a3e3668b3d9166a9"/></dir></dir><dir name="Helper"><file name="Data.php" hash="46e33787f9d8f4d481c137f58afb2001"/></dir><dir name="controllers"><file name="AccountController.php" hash="2c19309278eeec7a50f2dcc3e77b78bd"/></dir><dir name="etc"><file name="adminhtml.xml" hash="1c96317d19ad238aaf91695e1b392a68"/><file name="config.xml" hash="6faa01bbb8a9d7f72e41d4269547cf66"/><file name="system.xml" hash="08c586ad0b76b428ed9ce647df97980d"/></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="Keymail_KeymailLogin.xml" hash="01af2fc22bf5d16cddee0aa11808b6bc"/></dir></target><target name="magedesign"><dir name="frontend"><dir name="default"><dir name="default"><dir name="layout"><file name="keymail.xml" hash="f51e9ab036d7519e1d86e1df0cc8ea74"/></dir><dir name="template"><dir name="keymail"><dir name="customer"><dir name="form"><file name="mini.login.phtml" hash="3c583caae58bee542b25d6e7e723718a"/></dir></dir><file name="login.phtml" hash="1dfa6f1af9d7c9dabfff9f8cd934d147"/><dir name="onepage"><file name="login.phtml" hash="cecf4326952045d2a0d3f4d8b34c0c52"/></dir></dir></dir></dir></dir></dir></target><target name="magelocale"><dir name="en_US"><dir name="template"><dir name="email"><file name="keymail_new.html" hash="00b3ed58c0e677421849f40683fb8126"/><file name="keymail_new.txt" hash="c30541c2e18139b4da388a15d808e0f5"/></dir></dir></dir></target></contents>
+    <compatible/>
+    <dependencies><required><php><min>5.2.0</min><max>6.0.0</max></php></required></dependencies>
+</package>
